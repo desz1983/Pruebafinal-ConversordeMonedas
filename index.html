@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Pesos Chilenos</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h1 class="is-size-1">Conversor de Pesos Chilenos</h1>
+      <div class="notification is-secondary">
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label is-size-3">Monto CLP:</label>
+              <div class="control">
+                <input class="input is-large" type="number" id="monto" placeholder="Ingrese el monto en CLP" 
+                onkeypress="return onlyNumberKey(event)" pattern="\d*" >
+              </div>
+              <span id="error" class="has-text-danger"></span>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label is-size-3">Moneda a convertir:</label>
+              <div class="control">
+                <div class="select is-large">
+                  <select id="indicadores">
+                    <option value="dolar">Dolar</option>
+                    <option value="euro">Euro</option>
+                    <option value="utm">UTM</option>
+                    <option value="uf">UF</option>
+                    <option value="bitcoin">Bitcoin</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+          <div class="field">
+            <div class="control">
+              <button id="btnCalcular" class="button is-link is-fullwidth">Calcular</button>
+            </div>
+            <span id="errorTry" class="has-text-danger"></span>
+          </div>
+
+
+        <div class="field">
+          <span id="resultado"></span>
+          <div class="container">
+            <canvas id="myChart"  class="grafica" width="578" height="289"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>
